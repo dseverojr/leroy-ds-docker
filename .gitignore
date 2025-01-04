@@ -1,0 +1,21 @@
+# Ignore PostgreSQL data and Docker volumes
+*/postgres/data/
+*/docker-volumes/
+*/db-data/
+
+# Ignore Docker artifacts
+*.tar
+*.img
+*.iso
+
+# Ignore Python and Jupyter artifacts
+__pycache__/
+*.pyc
+.vscode/
+.env
+.ipynb_checkpoints/
+
+# Ignore large files (optional)
+*.log
+*.tmp
+*.csv
