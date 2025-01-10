@@ -69,8 +69,8 @@ services:
     ports:
       - "8082:8084" # NiFi Web UI mapeado para localhost:8082
     volumes:
-      - /c/fiap/docker/nifi/data:/opt/nifi/nifi-current/data
-      - /c/fiap/docker/nifi/conf:/opt/nifi/nifi-current/conf      
+      - /c/fiap/volumes/nifi/data:/opt/nifi/nifi-current/data
+      - /c/fiap/volumes/nifi/conf:/opt/nifi/nifi-current/conf      
     networks:
       - bigdata_network
 
@@ -99,8 +99,7 @@ services:
       - PYSPARK_SUBMIT_ARGS=--master spark://spark-master:7077 pyspark-shell
       - HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
       - CLASSPATH=/usr/local/hadoop/share/hadoop/common/lib/*:/usr/local/hadoop/share/hadoop/common/*:/usr/local/hadoop/share/hadoop/hdfs/*:/usr/local/hadoop/share/hadoop/mapreduce/*:/usr/local/hadoop/share/hadoop/yarn/*:/usr/local/hadoop/share/hadoop/tools/lib/*
-      - LD_LIBRARY_PATH=/usr/local/hadoop/lib/native
-     # - PATH=$PATH:/usr/local/hadoop/bin      
+      - LD_LIBRARY_PATH=/usr/local/hadoop/lib/native     
     depends_on:
       - spark-master
     networks:
