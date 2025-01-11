@@ -1,14 +1,14 @@
 <configuration>
     <!-- NameNode directory for metadata and namespace image -->
     <property>
-    <name>dfs.namenode.name.dir</name>
-    <value>file:///opt/hadoop/data/dfs/name</value>
+        <name>dfs.namenode.name.dir</name>
+        <value>file:///hadoop/dfs/name</value>
     </property>
 
     <!-- DataNode directory for block storage -->
     <property>
         <name>dfs.datanode.data.dir</name>
-        <value>file:///opt/hadoop/data/dfs/data</value>
+        <value>file:///hadoop/dfs/data</value>
     </property>
 
     <!-- Default block replication factor -->

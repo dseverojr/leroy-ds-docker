@@ -12,7 +12,7 @@ ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 ENV PATH=$PATH:$HADOOP_HOME/bin
 
 # Copia arquivos de configuracao do Hadoop para dentro da imagem
-COPY config/* $HADOOP_CONF_DIR/
+COPY haddoop_conf/* $HADOOP_CONF_DIR/
 
 # Criacao dos arquivos necessarios e permissoes
 RUN mkdir -p $HADOOP_DATA_DIR/dfs/data && \
