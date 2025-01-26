@@ -39,7 +39,7 @@ RUN chown -R nifi:nifi $HADOOP_HOME
 USER nifi
 
 # Expoe porta TCP WebUI do NiFi
-EXPOSE 8080
+EXPOSE 8084
 
 # inicia NiFi
 CMD ["bin/nifi.sh", "run"]
